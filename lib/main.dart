@@ -10,13 +10,13 @@ void main() async {
   runApp(const MyApp());
 }
 
-// Paleta de colores personalizada
+// Paleta de colores personalizada actualizada con tonos más vivos
 class AppColors {
-  static const Color primary = Color(0xFFB3D1E6);
-  static const Color secondary = Color(0xFFEAF3FA);
-  static const Color accent = Color(0xFFF7F7F7);
-  static const Color text = Color(0xFF222222);
-  static const Color error = Color(0xFFE57373);
+  static const Color primary = Color.fromARGB(255, 61, 151, 139); // Azul más brillante
+  static const Color secondary = Color(0xFFD0E8FF); // Azul muy claro y fresco
+  static const Color accent = Color(0xFFFFFFFF); // Blanco puro para contraste
+  static const Color text = Color(0xFF1B1F3B); // Azul oscuro para texto
+  static const Color error = Color(0xFFE94B3C); // Rojo vibrante para errores
 }
 
 class MyApp extends StatelessWidget {
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Poppins',
         appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.primary,
+          backgroundColor: Color.fromARGB(255, 35, 255, 226),
           foregroundColor: AppColors.text,
         ),
         inputDecorationTheme: const InputDecorationTheme(
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(AppColors.primary),
+            backgroundColor: MaterialStatePropertyAll(const Color.fromARGB(255, 30, 155, 138)),
             foregroundColor: MaterialStatePropertyAll(AppColors.text),
             textStyle: MaterialStatePropertyAll(TextStyle(fontWeight: FontWeight.w600)),
           ),
@@ -291,3 +291,4 @@ Future<bool> validarUsuario(String apodo, String contrasena) async {
   }
   return false; // No coincide
 }
+
