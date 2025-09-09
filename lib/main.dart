@@ -12,7 +12,7 @@ void main() async {
 
 // Paleta de colores personalizada actualizada con tonos más vivos
 class AppColors {
-  static const Color primary = Color.fromARGB(255, 61, 151, 139); // Azul más brillante
+  static const Color primary = Color.fromARGB(255, 53, 136, 125); // Azul más brillante
   static const Color secondary = Color(0xFFD0E8FF); // Azul muy claro y fresco
   static const Color accent = Color(0xFFFFFFFF); // Blanco puro para contraste
   static const Color text = Color(0xFF1B1F3B); // Azul oscuro para texto
@@ -38,17 +38,17 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Poppins',
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 35, 255, 226),
+          backgroundColor: Color.fromARGB(255, 69, 173, 159),
           foregroundColor: AppColors.text,
         ),
         inputDecorationTheme: const InputDecorationTheme(
           filled: true,
-          fillColor: AppColors.accent,
+          fillColor: Color.fromARGB(255, 255, 255, 255),
           border: OutlineInputBorder(),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(const Color.fromARGB(255, 30, 155, 138)),
+            backgroundColor: MaterialStatePropertyAll(const Color.fromARGB(255, 0, 255, 234)),
             foregroundColor: MaterialStatePropertyAll(AppColors.text),
             textStyle: MaterialStatePropertyAll(TextStyle(fontWeight: FontWeight.w600)),
           ),
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  "Tu espacio seguro para el bienestar mental",
+                  "Este sera tu lugar seguro, uno hecho solo para ti",
                   style: TextStyle(
                     fontSize: 16,
                     color: AppColors.text,
@@ -168,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
                       MaterialPageRoute(builder: (context) => RegisterPage()),
                     );
                   },
-                  child: const Text("¿No tienes cuenta? Regístrate aquí"),
+                  child: const Text("Si, eres nuevo empieza aquí"),
                 ),
               ],
             ),
@@ -213,7 +213,7 @@ class _AccountPageState extends State<AccountPage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle),
-            label: 'Registrar Actividades',
+            label: 'Cronograma para tu dia',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
@@ -253,7 +253,7 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("Aquí va el Calendario"),
+      child: Text("Empieza un nuevo calendario aqui"),
     );
   }
 }
@@ -269,7 +269,7 @@ class EmotionRegistrationPage extends StatelessWidget {
         onPressed: () {
           // Lógica para registrar emociones
         },
-        child: const Text("Registrar Emoción"),
+        child: const Text("Registremos tus emociones"),
       ),
     );
   }
