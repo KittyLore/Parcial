@@ -47,7 +47,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEAF3FA), // secondary-color
+      backgroundColor: const Color.fromARGB(255, 0, 182, 152), // secondary-color
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
@@ -55,7 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
             padding: const EdgeInsets.all(20),
             constraints: const BoxConstraints(maxWidth: 600),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: const Color.fromARGB(255, 75, 249, 255),
               borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
@@ -261,7 +261,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         },
                         child: const Text(
                           'Inicia sesión',
-                          style: TextStyle(color: Color(0xFF4a90e2)),
+                          style: TextStyle(color: Color.fromARGB(255, 0, 214, 221)),
                         ),
                       ),
                     ],
