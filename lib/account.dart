@@ -23,25 +23,25 @@ class _AccountPageState extends State<AccountPage> {
         title: const Text("Mi Cuenta"),
       ),
       body: _selectedIndex == 0
-          ? const Center(child: Text("Registrar Actividades"))
+          ? const Center(child: Text("Registremos tus actividades"))
           : _selectedIndex == 1
-              ? const Center(child: Text("Calendario"))
-              : const Center(child: Text("Registrar Emociones")),
+              ? const Center(child: Text("Mi calendario"))
+              : const Center(child: Text("Registremos y revisemos tus emociones")),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle),
-            label: 'Registrar Actividades',
+            label: 'Registremos tus actividades',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
-            label: 'Calendario',
+            label: 'Mi calendario',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.face),
-            label: 'Registrar Emociones',
+            label: 'Registremos y revisemos tus emociones',
           ),
         ],
       ),
