@@ -39,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
     Navigator.of(context).pushReplacementNamed('/home');
   } catch (e) {
     setState(() {
-      error = 'Error al registrar: $e';
+      error = 'Ups algo salio mal, volvaos a intentar: $e';
     });
   }
 }
@@ -96,10 +96,10 @@ class _RegisterPageState extends State<RegisterPage> {
                           decoration: const InputDecoration(labelText: 'Nombre'),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Campo requerido';
+                              return 'Ups, debes llenar este campo';
                             }
                             if (!nombreApellidoRegExp.hasMatch(value)) {
-                              return 'Solo letras y espacios';
+                              return 'Aqui solo letras y espacios';
                             }
                             return null;
                           },
@@ -112,10 +112,10 @@ class _RegisterPageState extends State<RegisterPage> {
                           decoration: const InputDecoration(labelText: 'Apellido'),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Campo requerido';
+                              return 'Ups, debes llenar este campo';
                             }
                             if (!nombreApellidoRegExp.hasMatch(value)) {
-                              return 'Solo letras y espacios';
+                              return 'Aqui solo letras y espacios';
                             }
                             return null;
                           },
@@ -129,7 +129,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     decoration: const InputDecoration(labelText: 'Nombre de usuario'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Campo requerido';
+                        return 'Ups, debes llenar este campo';
                       }
                       return null;
                     },
@@ -141,7 +141,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     keyboardType: TextInputType.emailAddress,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Campo requerido';
+                        return 'Ups, debes llenar este campo';
                       }
                       if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
                         return 'Email inválido';
@@ -156,10 +156,10 @@ class _RegisterPageState extends State<RegisterPage> {
                     obscureText: true,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Campo requerido';
+                        return 'Ups, debes llenar este campo';
                       }
-                      if (value.length < 6) {
-                        return 'Mínimo 6 caracteres';
+                      if (value.length < 5) {
+                        return 'Mínimo 5 caracteres';
                       }
                       return null;
                     },
@@ -213,7 +213,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   TextFormField(
                     decoration: const InputDecoration(
                       labelText: 'Descripción personal',
-                      hintText: 'Cuéntanos un poco sobre ti...',
+                      hintText: 'Hablanos de ti...',
                     ),
                     maxLines: 4,
                     onSaved: (value) => descripcion = value ?? '',
