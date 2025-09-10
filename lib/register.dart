@@ -126,7 +126,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
-                    decoration: const InputDecoration(labelText: 'Nombre de usuario'),
+                    decoration: const InputDecoration(labelText: 'Apodo'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Ups, debes llenar este campo';
@@ -203,7 +203,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       const SizedBox(width: 12),
                       Expanded(
                         child: TextFormField(
-                          decoration: const InputDecoration(labelText: 'Carrera'),
+                          decoration: const InputDecoration(labelText: '¿Qué estudias?'),
                           onSaved: (value) => carrera = value ?? '',
                         ),
                       ),
@@ -212,7 +212,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   const SizedBox(height: 16),
                   TextFormField(
                     decoration: const InputDecoration(
-                      labelText: 'Descripción personal',
+                      labelText: 'Descripción sobre ti',
                       hintText: 'Hablanos de ti...',
                     ),
                     maxLines: 4,
